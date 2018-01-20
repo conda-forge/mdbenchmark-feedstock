@@ -1,6 +1,6 @@
 {% set name = "mdbenchmark" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "4b6c64fbf6826fc0b6ecc7f5d55c5a828cf26cf700c5d51d3942a7b7d2f199af" %}
+{% set version = "1.1.1" %}
+{% set sha256 = "19b50a186ed63f37f03a1b926b8e4ce3acf14dd53a297946660d172020cb6b3e" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: true  # [win or py3k or osx]
+  skip: true  # [win or py3k]
   entry_points:
     - mdbenchmark = mdbenchmark.cli:cli
 
