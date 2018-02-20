@@ -1,6 +1,6 @@
 {% set name = "mdbenchmark" %}
-{% set version = "1.1.1" %}
-{% set sha256 = "7658bbf7a44496a7d376580047deccf0017bd162e2a6e2e028dc28bc2af08cc1" %}
+{% set version = "1.2.0" %}
+{% set sha256 = "0f0579d68a30ce9681d4325d641f45cc3f983a80d4485fd60c4e773224449909" %}
 
 package:
   name: {{ name|lower }}
@@ -49,3 +49,4 @@ about:
 extra:
   recipe-maintainers:
     - kain88-de
+    - mimischi
