@@ -7,7 +7,7 @@ Package license: GPL-3.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: Benchmark GROMACS simulations
+Summary: Benchmark molecular dynamics simulations
 
 
 
