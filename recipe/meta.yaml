@@ -33,8 +33,7 @@ requirements:
     - pandas
     - matplotlib <3.0  # [py27]
     - matplotlib       # [py>=34]
-    - xdg <2           # [py27]
-    - xdg              # [py>=34]
+    - xdg <2           
     - python-levenshtein
     - tabulate >=0.8.2
 
