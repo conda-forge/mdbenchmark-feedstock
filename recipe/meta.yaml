@@ -13,7 +13,7 @@ source:
 
 build:
   number: 1000
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed -vv .
   skip: true  # [win]
   entry_points:
     - mdbenchmark = mdbenchmark.cli:cli
@@ -26,11 +26,15 @@ requirements:
     - python
     - numpy >=1.8
     - datreant >=1.0.0
-    - click==6.7
+    - click==6.7       # [py<=36]
+    # unpin for py37
+    - click>=6.7       # [py>=37]   
     - jinja2
     - pandas
-    - matplotlib <3.0
-    - xdg <2
+    - matplotlib <3.0  # [py27]
+    - matplotlib       # [py>=34]
+    - xdg <2           # [py27]
+    - xdg              # [py>=34]
     - python-levenshtein
     - tabulate >=0.8.2
 
