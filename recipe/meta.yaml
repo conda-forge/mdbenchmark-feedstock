@@ -27,14 +27,11 @@ requirements:
     - python
     - numpy >=1.8
     - datreant >=1.0.0
-    - click==6.7       # [py<=36]
-    # unpin for py37
-    - click>=6.7       # [py>=37]   
+    - click >=6.7
     - jinja2
     - pandas
-    - matplotlib <3.0  # [py27]
-    - matplotlib       # [py>=34]
-    - xdg <2           
+    - matplotlib >=2
+    - xdg <2
     - python-levenshtein
     - tabulate >=0.8.2
 
