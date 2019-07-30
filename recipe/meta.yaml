@@ -39,6 +39,8 @@ requirements:
     - tabulate >=0.8.2
 
 test:
+  requires:
+    - libglu  # [linux]
   imports:
     - mdbenchmark
   commands:
