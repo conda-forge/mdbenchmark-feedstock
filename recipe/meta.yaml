@@ -42,7 +42,8 @@ test:
   imports:
     - mdbenchmark
   commands:
-    - mdbenchmark
+    - xvfb-run --server-args=":99 -screen 0 1024x768x24 -ac +extension GLX -noreset" mdbenchmark  # [linux]
+    - mdbenchmark  # [not linux]
 
 about:
   home: https://github.com/bio-phys/MDBenchmark
