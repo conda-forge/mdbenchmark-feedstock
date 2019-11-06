@@ -31,7 +31,8 @@ requirements:
     - jinja2
     - pandas
     - matplotlib >=2
-    - xdg <2
+    - xdg <2 [py2k]
+    - xdg >=2 [>=py35]
     - python-levenshtein
     - tabulate >=0.8.2
 
