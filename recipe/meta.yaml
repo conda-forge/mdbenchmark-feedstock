@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1000
+  script: python -m pip install --no-deps --ignore-installed -vv .
   skip: true  # [win]
   entry_points:
     - mdbenchmark = mdbenchmark.cli:cli
@@ -22,23 +22,27 @@ requirements:
   build:
     - python
     - setuptools
+    - pip
   run:
     - python
     - numpy >=1.8
     - datreant >=1.0.0
-    - click==6.7
+    - click >=6.7
     - jinja2
     - pandas
-    - matplotlib <3.0
+    - matplotlib >=2
     - xdg <2
     - python-levenshtein
     - tabulate >=0.8.2
 
 test:
+  requires:
+    - libglu  # [linux]
   imports:
     - mdbenchmark
   commands:
-    - mdbenchmark
+    - xvfb-run --server-args=":99 -screen 0 1024x768x24 -ac +extension GLX -noreset" mdbenchmark  # [linux]
+    - mdbenchmark  # [not linux]
 
 about:
   home: https://github.com/bio-phys/MDBenchmark
