@@ -1,1 +1,1 @@
-xorg-x11-server-Xvfb
+xorg-x11-server-Xvfbxorg-x11-server-Xorg

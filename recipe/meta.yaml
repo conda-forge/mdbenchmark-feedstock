@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
   script: python -m pip install --no-deps --ignore-installed -vv .
   skip: true  # [win]
   entry_points:
@@ -30,7 +30,7 @@ requirements:
     - click >=6.7
     - jinja2
     - pandas
-    - matplotlib >=2
+    - matplotlib-base >=2
     - xdg <2  # [py2k]
     - xdg >=2  # [py>=35]
     - python-levenshtein
