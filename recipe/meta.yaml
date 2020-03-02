@@ -1,6 +1,6 @@
 {% set name = "mdbenchmark" %}
-{% set version = "2.0.0" %}
-{% set sha256 = "0749478d52d7651b7c9b05c4494431125e247531adfd38181b815e347e155558" %}
+{% set version = "2.0.1b" %}
+{% set sha256 = "c528d610a0dab1ff2f54c783acb989ff68039c6e9438a567dc160ad6a57322b2" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   script: python -m pip install --no-deps --ignore-installed -vv .
   skip: true  # [win]
   entry_points:
