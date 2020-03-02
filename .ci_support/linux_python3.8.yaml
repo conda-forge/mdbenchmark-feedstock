@@ -1,7 +1,7 @@
 channel_sources:
-- conda-forge,defaults
+- conda-forge/label/prerelease-mdbenchmark,conda-forge,defaults
 channel_targets:
-- conda-forge main
+- conda-forge prerelease-mdbenchmark
 docker_image:
 - condaforge/linux-anvil-comp7
 pin_run_as_build:
