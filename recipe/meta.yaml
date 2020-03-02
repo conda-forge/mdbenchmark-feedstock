@@ -19,9 +19,8 @@ build:
     - mdbenchmark = mdbenchmark.cli:cli
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
     - pip
   run:
     - python
