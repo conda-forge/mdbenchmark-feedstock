@@ -1,6 +1,6 @@
 {% set name = "mdbenchmark" %}
-{% set version = "2.0.1b1" %}
-{% set sha256 = "c528d610a0dab1ff2f54c783acb989ff68039c6e9438a567dc160ad6a57322b2" %}
+{% set version = "2.0.1b2" %}
+{% set sha256 = "31ed2d3962f82f672abcbb813bea0ebd8c30ef3fdcd7e47384656db3c261c4e8" %}
 
 package:
   name: {{ name|lower }}
