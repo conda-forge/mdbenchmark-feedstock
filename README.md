@@ -7,8 +7,10 @@ Package license: GPL-3.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: Benchmark molecular dynamics simulations
+Summary: Quickly generate, start and analyze benchmarks for your molecular dynamics simulations.
 
+MDBenchmark is a tool to squeeze the maximum out of your limited computing resources. It tries to make it as easy as possible to set up systems on varying numbers of nodes and compare their performances to each other.
+You can also create a plot to get a quick overview of the possible performance (and show of to your friends)! The plot below shows the performance of an molecular dynamics system on up to five nodes with and without GPUs.
 
 
 Current build status
