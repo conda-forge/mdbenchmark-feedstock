@@ -1,5 +1,5 @@
-{% set version = "2.0.1" %}
-{% set sha256 = "8f0e5670b044246167e919e6d0ebd6fb1c88f472a9ffae52b92b56b8c09a8bac" %}
+{% set version = "3.0.1" %}
+{% set sha256 = "3b2ebb693737a93155a67a7f25f3f5d20140ba8d87e5bda461e44840d0f1f87d" %}
 
 package:
   name: mdbenchmark
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed -vv .
   skip: true  # [win]
   entry_points:
@@ -20,20 +20,21 @@ build:
 requirements:
   host:
     - python
-    - poetry
+    - poetry >=1.1.0
     - pip
   run:
     - python
-    - numpy >=1.8
+    - numpy >=1.15
     - datreant >=1.0.0
     - click >=6.7
-    - jinja2
-    - pandas
+    - jinja2 >=2.10
+    - pandas >=0.24
     - matplotlib-base >=2
     - xdg <2  # [py2k]
     - xdg >=2  # [py>=35]
-    - python-levenshtein
+    - python-levenshtein >=0.12.0
     - tabulate >=0.8.2
+    - psutil >=5.7.0
 
 test:
   requires:
@@ -55,7 +56,7 @@ about:
   description: >
     MDBenchmark is a tool to squeeze the maximum out of your limited computing resources. It tries to make it as easy as possible to set up systems on varying numbers of nodes and compare their performances to each other.
 
-    You can also create a plot to get a quick overview of the possible performance (and show of to your friends)! The plot below shows the performance of an molecular dynamics system on up to five nodes with and without GPUs.
+    You can also create a plot to get a quick overview of the possible performance (and show of to your friends)!
 
 extra:
   recipe-maintainers:
