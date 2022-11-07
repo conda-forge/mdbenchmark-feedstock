@@ -1,17 +1,15 @@
 {% set version = "3.0.1" %}
-{% set sha256 = "3b2ebb693737a93155a67a7f25f3f5d20140ba8d87e5bda461e44840d0f1f87d" %}
 
 package:
   name: mdbenchmark
   version: {{ version }}
 
 source:
-  fn: mdbenchmark-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/m/mdbenchmark/mdbenchmark-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 3b2ebb693737a93155a67a7f25f3f5d20140ba8d87e5bda461e44840d0f1f87d
 
 build:
-  number: 3
+  number: 4
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed -vv .
   skip: true  # [win]
   entry_points:
@@ -30,8 +28,7 @@ requirements:
     - jinja2 >=2.10
     - pandas >=0.24
     - matplotlib-base >=2
-    - xdg <2  # [py2k]
-    - xdg >=2  # [py>=35]
+    - xdg >=2
     - python-levenshtein >=0.12.0
     - tabulate >=0.8.2
     - psutil >=5.7.0
@@ -47,14 +44,14 @@ test:
 
 about:
   home: https://github.com/bio-phys/MDBenchmark
-  license: GPL-3.0
-  license_family: GPL
+  license: GPL-3.0-only
   license_file: LICENSE
   summary: "Quickly generate, start and analyze benchmarks for your molecular dynamics simulations."
   doc_url: https://docs.mdbenchmark.org
   dev_url: https://github.com/bio-phys/MDBenchmark
   description: >
-    MDBenchmark is a tool to squeeze the maximum out of your limited computing resources. It tries to make it as easy as possible to set up systems on varying numbers of nodes and compare their performances to each other.
+    MDBenchmark is a tool to squeeze the maximum out of your limited computing resources.
+    It tries to make it as easy as possible to set up systems on varying numbers of nodes and compare their performances to each other.
 
     You can also create a plot to get a quick overview of the possible performance (and show of to your friends)!
 
