@@ -9,7 +9,7 @@ source:
   sha256: 3b2ebb693737a93155a67a7f25f3f5d20140ba8d87e5bda461e44840d0f1f87d
 
 build:
-  number: 4
+  number: 5
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed -vv .
   skip: true  # [win]
   entry_points:
